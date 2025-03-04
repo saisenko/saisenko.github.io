@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <base href="/saisenko.github.io/lab1/">
+    
+    <link rel="shortcut icon" href="./img/chef.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/index.css">
+
+    <title>Master Sai's | Main</title>
+</head>
+<body>
+    <header>
+        <img src="./img/chef.png" alt="Restaurant logo" id="logo">
+        <div class="header-content active" id="en">
+            <input type="search" placeholder="I'd like to taste..." id="dish-search">
+            <nav class="header-nav">
+                <a href="./menu.html">Menu</a>
+                <hr class="solid"/>
+                <a href="./chefs.html">Our Chefs</a>
+                <hr class="solid"/>
+                <a href="./about.html">About Us</a>
+            </nav>
+        </div>
+
+        <div class="header-content" id="ua">
+            <input type="search" placeholder="Я хочу скуштувати..." id="dish-search">
+            <nav class="header-nav">
+                <a href="./menu.html">Меню</a>
+                <hr class="solid"/>
+                <a href="./chefs.html">Наші кухарі</a>
+                <hr class="solid"/>
+                <a href="./about.html">Про нас</a>
+            </nav>
+        </div>
+
+        <div class="change-lang">
+            <button class="change-lang-btn" onclick="switchLang('en')">
+                <img class="lang-flag" src="./img/eng.png" alt="English">
+            </button>
+            <button class="change-lang-btn" onclick="switchLang('ua')">
+                <img class="lang-flag" src="./img/ua.png" alt="Ukraine">
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <h1>Chef Recommends 🧑‍🍳</h1>
+        <div class="recommended-section">
+            <h2>Beef Rossini</h2>
+            <article>
+                <img src="./img/food/beef-rossini.jpg" alt="Beef Rossini">
+                <p class="article-text">
+                    A French steak dish consisting of beef tournedos (filet mignon), pan-fried in butter,
+                    served on a crouton, and topped with a slice of fresh foie gras briefly pan-fried
+                    at the last minute.<br/><br/>
+                    
+                    The dish is garnished with slices of black truffle and finished
+                    with sauce madère, a Madeira-based sauce.<br/><br/>
+                    
+                    It is named after 19th-century composer Gioachino Rossini.
+                    Its invention is attributed to either French master chef Marie-Antoine Carême,
+                    Adolphe Dugléré, or Savoy Hotel chef Auguste Escoffier.
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h2>Contact Us</h2>
+            <ul>
+                <li><b>Address:</b> 123 Main Street, Kyiv, Ukraine</li>
+                <li><b>Phone:</b> +380 44 123 4567</li>
+                <li><b>Email:</b> info@restaurant.com</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Hours of Operation</h2>
+            <ul>
+                <li><b>Monday - Thursday:</b> 11:00 AM - 10:00 PM</li>
+                <li><b>Friday - Saturday:</b> 11:00 AM - 11:00 PM</li>
+                <li><b>Sunday:</b> 12:00 PM - 9:00 PM</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">X (former Twitter)</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./chefs.html">Chefs</a></li>
+                <li><a href="./about.html">About Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function setLanguageCookie(lang) {
+           document.cookie = `lang=${lang}; path=/; max-age=${60*60*24*30}`;
+        }
+        
+        function switchLang(lang) {
+            setLanguageCookie(lang);
+
+            document.getElementById('en').classList.toggle('active', lang === 'en');
+            document.getElementById('ua').classList.toggle('active', lang === 'ua');
+        }
+    </script>
+</body>
+</html>

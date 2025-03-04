@@ -1,0 +1,126 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.back-btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #555;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+td {
+    border: 2px solid #333;
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.menu {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.menu-dish--description {
+    display: none;
+}
+
+.menu-dish:hover td:nth-child(2),
+.menu-dish:hover td:nth-child(4) {
+    background-color: #333;
+    color: white;
+    transition: ease-out 0.3s;
+}
+
+.menu-dish:hover td:nth-child(1),
+.menu-dish:hover td:nth-child(3),
+.menu-dish:hover td:nth-child(4) button {
+    background-color: white;
+    color: black;
+    transition: ease-in 0.3s;
+}
+
+.menu-dish--img,
+.menu-dish--price {
+    white-space: nowrap;
+    width: 60%;
+    background-color: #333;
+    color: white;
+}
+
+.menu-dish--name {
+    width: 100%;
+}
+
+.menu-dish--img img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #333;
+}
+
+.menu-dish--btn {
+    background-color: #333;
+    color: white;
+
+    padding: 8px;
+    border-radius: 25px;
+
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-dish--ingredients {
+    text-align: left;
+    width: 40%;
+}
+
+.menu-dish--ingredients ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 16px;
+    }
+
+    .menu-dish--img img {
+        max-width: 100px;
+    }
+
+    .back-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
